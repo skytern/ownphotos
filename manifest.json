@@ -1,0 +1,48 @@
+{
+    "name": "Ownphotos",
+    "id": "ownphotos",
+    "packaging_format": 1,
+    "description": {
+        "en": "Do you speak French ?",
+        "fr": "Implémentation de ownphotos pour yunohost"
+    },
+    "url": "https://github.com/hooram/ownphotos",
+    "version": "0.1",
+    "license": "free",
+    "maintainer": {
+        "name": "Alfred",
+        "email": "tim84320@gmail.com"
+    },
+    "requirements": {
+        "yunohost": ">= 2.4.0"
+    },
+    "multi_instance": true,
+    "services": [
+        "nginx",
+        "php5-fpm",
+        "mysql"
+    ],
+    "arguments": {
+        "install" : [
+            {
+                "name": "domain",
+                "type": "domain",
+                "ask": {
+                    "en": "Choose a domain for Ownphotos",
+                    "fr": "Choisissez un domaine pour Ownphotos"
+                },
+                "example": "domain.org"
+            },
+            {
+                "name": "path",
+                "type": "path",
+                "ask": {
+                    "en": "Choose a path for Ownphotos",
+                    "fr": "Choisissez un chemin pour Ownphotos"
+                },
+                "example": "/ownphotos",
+                "default": "/ownphotos"
+            }
+        ]
+    }
+}
